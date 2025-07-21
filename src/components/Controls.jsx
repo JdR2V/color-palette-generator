@@ -1,5 +1,5 @@
 import React from 'react';
-import './Controls.css'; // Asegúrate de crear este archivo CSS
+import './Controls.css';
 
 function Controls({ onGenerate, onSave, canSave }) {
   return (
@@ -10,7 +10,7 @@ function Controls({ onGenerate, onSave, canSave }) {
       <button
         onClick={onSave}
         className="control-button save-button"
-        disabled={!canSave} // El botón se deshabilita si no se puede guardar
+        disabled={!canSave} // El botón se deshabilita cuando alcanza el limite de colores // The button is disabled when it reaches the limit of colors allowed
         title={canSave ? "Guardar el color actual en la paleta" : "Paleta llena o color ya guardado"}
       >
         Guardar Color

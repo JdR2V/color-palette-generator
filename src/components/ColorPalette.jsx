@@ -16,13 +16,13 @@ function ColorPalette({ colors, onRemoveColor, onDownload, paletteRef }) {
                 className="palette-color-item"
                 style={{ backgroundColor: color }}
               >
-                {/* AÑADE ESTE BOTÓN AQUÍ */}
+                {/* Este es el botón de quitar color // This is the remove color button. */}
                 <button
                   className="remove-color-button"
-                  onClick={() => onRemoveColor(color)} // Al hacer clic, llama a onRemoveColor con el color actual
+                  onClick={() => onRemoveColor(color)} //
                   title="Eliminar este color de la paleta"
                 >
-                  &times; {/* Esto es un carácter 'x' de multiplicación que se ve como una 'X' */}
+                  &times; {}
                 </button>
               </div>
             ))}

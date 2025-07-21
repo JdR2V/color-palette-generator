@@ -9,15 +9,15 @@
   margin-bottom: 20px;
   position: relative;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición suave del color */
+  transition: background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .color-code {
   font-size: 2em;
   font-weight: bold;
-  color: #fff; /* Color del texto, ajusta según el contraste */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para mejor visibilidad */
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .copied-message {
@@ -38,9 +38,8 @@
   100% { opacity: 0; }
 }
 
-/* Ajuste para texto oscuro si el fondo es claro */
+
 .color-display-container .color-code[style*="background-color: #F"] {
   color: #333; /* O un color oscuro */
   text-shadow: none;
 }
-/* Puedes añadir una función en JS para determinar si el color es claro u oscuro y aplicar una clase */

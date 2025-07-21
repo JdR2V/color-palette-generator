@@ -1,9 +1,9 @@
 .controls-container {
   display: flex;
-  gap: 15px; /* Espacio entre los botones */
+  gap: 15px;
   margin-bottom: 30px;
-  justify-content: center; /* Centrar los botones */
-  flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .control-button {
@@ -29,12 +29,12 @@
   background-color: #cccccc;
   cursor: not-allowed;
   opacity: 0.7;
-  transform: none; /* Quitar la animación al estar deshabilitado */
+  transform: none;
   box-shadow: none;
 }
 
 .generate-button {
-  background-color: #4CAF50; /* Verde */
+  background-color: #4CAF50;
   color: white;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .save-button {
-  background-color: #008CBA; /* Azul */
+  background-color: #008CBA;
   color: white;
 }
 

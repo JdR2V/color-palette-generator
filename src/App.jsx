@@ -4,6 +4,7 @@ import ColorDisplay from './components/ColorDisplay.jsx';
 import Controls from './components/Controls.jsx';
 import ColorPalette from './components/ColorPalette.jsx';
 import html2canvas from 'html2canvas';
+import Instrucciones from "./components/Instrucciones.jsx";
 
 function App() {
 
@@ -11,26 +12,26 @@ function App() {
   const [savedColors, setSavedColors] = useState([]);
   const paletteRef = useRef(null);
 
-  // Generar un color HEX Aleatorio
+  // Generar un color HEX Aleatorio / Generate Random HEX color
   const generateRandomColor = () => {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
     setCurrentColor(randomColor);
   }
 
 
-  // Guardar color actual
+  // Guardar color actual / Save current color
   const saveCurrentColor = () => {
     if (savedColors.length < 6 && !savedColors.includes(currentColor)) {
       setSavedColors(prevColors => [...prevColors, currentColor]);
     }
   }
 
-  // Eliminar un color
+  // Eliminar un color / Remove a color
   const removeColor = (colorToRemove) => {
     setSavedColors(prevColors => prevColors.filter(color => color !== colorToRemove));
   }
 
-  // Función para descargar la paleta (implementación con html2canvas)
+  // Función para descargar la paleta (implementación con html2canvas) / Function to download the palette (implemented with html2canvas)
   const downloadPalette = async () => {
     if (paletteRef.current) {
       try {
@@ -52,7 +53,7 @@ function App() {
   };
 
 
-  // Generar un color al cargar la App
+  // Generar un color al cargar la App / Generate a color when the App starts
   useEffect(() => {
     generateRandomColor();
   }, []);
@@ -72,7 +73,9 @@ function App() {
         onDownload={downloadPalette}
         paletteRef={paletteRef}
       />
+      <Instrucciones />
     </div>
+
   )
 }
 

@@ -1,0 +1,11 @@
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 80px;
+  background-color: #c9efef;
+  box-shadow: 10px 15px #4d4865;
+}

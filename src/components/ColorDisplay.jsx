@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ColorDisplay.css'; // Asegúrate de crear este archivo CSS
+import './ColorDisplay.css';
 
 function ColorDisplay({ color }) {
   const [copied, setCopied] = useState(false);
@@ -8,7 +8,7 @@ function ColorDisplay({ color }) {
     navigator.clipboard.writeText(color)
       .then(() => {
         setCopied(true);
-        setTimeout(() => setCopied(false), 1500); // Resetear el estado después de 1.5 segundos
+        setTimeout(() => setCopied(false), 1500); // Resetea el estado después de 1.5 segundos It resets the state after 1.5 seconds
       })
       .catch(err => {
         console.error('Error al copiar al portapapeles:', err);
@@ -20,7 +20,7 @@ function ColorDisplay({ color }) {
     <div
       className="color-display-container"
       style={{ backgroundColor: color }}
-      onClick={copyToClipboard} // Haz clic en el div para copiar
+      onClick={copyToClipboard}
       title="Haz clic para copiar el código de color" // Tooltip al pasar el ratón
     >
       <span className="color-code">{color}</span>
