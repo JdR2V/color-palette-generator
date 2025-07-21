@@ -1,0 +1,52 @@
+.controls-container {
+  display: flex;
+  gap: 15px; /* Espacio entre los botones */
+  margin-bottom: 30px;
+  justify-content: center; /* Centrar los botones */
+  flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
+}
+
+.control-button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:hover {
+  transform: translateY(-2px);
+}
+
+.control-button:active {
+  transform: translateY(0);
+}
+
+.control-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none; /* Quitar la animación al estar deshabilitado */
+  box-shadow: none;
+}
+
+.generate-button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.generate-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.save-button {
+  background-color: #008CBA; /* Azul */
+  color: white;
+}
+
+.save-button:hover:not(:disabled) {
+  background-color: #007bb5;
+}
