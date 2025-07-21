@@ -7,7 +7,7 @@ function ColorPalette({ colors, onRemoveColor, onDownload, paletteRef }) {
       <h2>Tu Paleta Guardada</h2>
       <div className="color-palette-container" ref={paletteRef}>
         {colors.length === 0 ? (
-          <p className="empty-palette-message">Guarda hasta 5 colores para crear tu paleta.</p>
+          <p className="empty-palette-message">Guarda hasta 6 colores para crear tu paleta.</p>
         ) : (
           <div className="saved-colors-grid">
             {colors.map((color, index) => (

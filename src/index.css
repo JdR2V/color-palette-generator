@@ -1,4 +1,9 @@
 .app-container {
-  font-family: sans-serif;
-  background-color: black;
+  font-family: Lato, sans-serif;
+  background-color: #d3d3d3;
+  align-items: center;
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content:  center;
+  width: 100%;
 }
