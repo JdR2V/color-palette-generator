@@ -29,6 +29,8 @@ function ColorPalette({ colors, onRemoveColor, onDownload, paletteRef }) {
           </div>
         )}
       </div>
+
+      {/*Este es el botón de descarga // This is the download button*/}
       {colors.length > 0 && (
         <button onClick={onDownload} className="download-palette-button">
           Descargar Paleta (PNG)

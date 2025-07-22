@@ -15,6 +15,7 @@ function Controls({ onGenerate, onSave, canSave }) {
       >
         Guardar Color
       </button>
+
     </div>
   );
 }

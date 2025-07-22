@@ -5,7 +5,7 @@
   align-items: center;
   text-align: center;
   padding: 10px;
-  border-radius: 80px;
+  border: #2e2e3e solid 5px;
   background-color: #c9efef;
-  box-shadow: 10px 15px #4d4865;
+
 }

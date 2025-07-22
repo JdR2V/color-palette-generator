@@ -1,6 +1,6 @@
 .color-palette-wrapper {
   text-align: center;
-  margin-top: 20px;
+
 }
 
 .color-palette-wrapper h2 {
@@ -77,11 +77,12 @@
   padding: 12px 25px;
   font-size: 1.1em;
   font-weight: bold;
-  border: none;
+  border: #2e2e3e solid 5px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.1s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 .download-palette-button:hover {
