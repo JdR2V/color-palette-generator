@@ -5,7 +5,7 @@ function Controls({ onGenerate, onSave, canSave }) {
   return (
     <div className="controls-container">
       <button onClick={onGenerate} className="control-button generate-button">
-        Generar Color Aleatorio
+        Generate a Random Color
       </button>
       <button
         onClick={onSave}
@@ -13,7 +13,7 @@ function Controls({ onGenerate, onSave, canSave }) {
         disabled={!canSave} // El botón se deshabilita cuando alcanza el limite de colores // The button is disabled when it reaches the limit of colors allowed
         title={canSave ? "Guardar el color actual en la paleta" : "Paleta llena o color ya guardado"}
       >
-        Guardar Color
+        Save Current Color
       </button>
 
     </div>

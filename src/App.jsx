@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Genera tu Paleta de Colores</h1>
+      <h1>Generate a new color palette</h1>
       <ColorDisplay color={currentColor}/>
       <Controls
         onGenerate={generateRandomColor}
