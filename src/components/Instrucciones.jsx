@@ -5,7 +5,7 @@ function Instrucciones() {
 
   return (
     <div className="instructions-container">
-      <h2>Instrucciones de uso:</h2>
+      <h2>Instructions:</h2>
       <ol>
         <dl>1. Click the "Generate Random Color" button</dl>
         <dl>2. If you like the color, you can click the "Save Color" button.</dl>
@@ -14,7 +14,9 @@ function Instrucciones() {
         <dl>5. That's it! Good luck on your next creative adventure!</dl>
         <dl>Tip: You can copy the color code by tapping the HEX code!</dl>
       </ol>
+      
     </div>
+    
   );
 }
 

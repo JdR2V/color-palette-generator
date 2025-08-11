@@ -74,8 +74,9 @@ function App() {
         paletteRef={paletteRef}
       />
       <Instrucciones />
+      
     </div>
-
+    
   )
 }
 
