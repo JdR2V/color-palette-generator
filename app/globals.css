@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
+/* ── DESIGN TOKENS ─────────────────────────────────────────────────────────── */
+
+@theme {
+    --font-display: "Syne", sans-serif;
+    --font-mono: "DM Mono", monospace;
+}
+
+/* ── LIGHT THEME (default) ─────────────────────────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f4f0;
+    --bg-surface: #eceae4;
+    --bg-raised: #e2dfd8;
+
+    --accent: #7c3aed; /* violet */
+    --accent-dim: #5b21b6;
+    --accent-subtle: rgba(124, 58, 237, 0.08);
+
+    --text-primary: #1a1825;
+    --text-secondary: #5a5572;
+    --text-muted: #9e97b8;
+
+    --border: rgba(0, 0, 0, 0.08);
+    --border-bright: rgba(0, 0, 0, 0.16);
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── DARK THEME ─────────────────────────────────────────────────────────────── */
+
+[data-theme="dark"] {
+    --bg-primary: #0f0f13;
+    --bg-secondary: #18181f;
+    --bg-surface: #22222c;
+    --bg-raised: #2a2a36;
+
+    --accent: #a78bfa;
+    --accent-dim: #7c5cbf;
+    --accent-subtle: rgba(167, 139, 250, 0.12);
+
+    --text-primary: #f0eeea;
+    --text-secondary: #9b97b2;
+    --text-muted: #4a4760;
+
+    --border: rgba(255, 255, 255, 0.07);
+    --border-bright: rgba(255, 255, 255, 0.14);
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── BASE STYLES ────────────────────────────────────────────────────────────── */
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* ── UTILITY CLASSES (bridge between Tailwind and CSS vars) ─────────────────── */
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+.bg-surface {
+    background-color: var(--bg-surface);
+}
+.bg-raised {
+    background-color: var(--bg-raised);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+.text-secondary {
+    color: var(--text-secondary);
+}
+.text-muted {
+    color: var(--text-muted);
+}
+.text-accent {
+    color: var(--accent);
+}
+
+.border-default {
+    border-color: var(--border);
+}
+.border-bright {
+    border-color: var(--border-bright);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+.bg-accent-subtle {
+    background-color: var(--accent-subtle);
+}
+
+.shadow-card {
+    box-shadow: var(--shadow);
+}
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+/* ── SCROLLBAR ──────────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bg-raised);
+    border-radius: 3px;
 }
